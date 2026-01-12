@@ -28,7 +28,7 @@ body {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: 40px;
   align-items: start;
   padding-bottom: 40px;
@@ -95,6 +95,12 @@ h3 {
   line-height: 1.7;
   color: var(--muted);
   margin: 20px 0 28px;
+  display: grid;
+  gap: 6px;
+}
+
+.lead p {
+  margin: 0;
 }
 
 .link-row {
