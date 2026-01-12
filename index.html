@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Professional Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div class="hero-text">
+          <p class="eyebrow">Professional Portfolio</p>
+          <h1>Derek Lee</h1>
+          <p class="lead">
+            Product-focused designer and engineer crafting calm, precise digital
+            tools for complex workflows.
+          </p>
+          <div class="link-row">
+            <a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noreferrer">
+              LinkedIn
+            </a>
+            <span class="divider">|</span>
+            <a href="https://github.com/your-handle" target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="hero-card">
+            <p class="hero-label">Focus</p>
+            <p class="hero-body">
+              Product strategy, interaction design, and prototyping with a
+              technical edge.
+            </p>
+          </div>
+          <div class="hero-card">
+            <p class="hero-label">Location</p>
+            <p class="hero-body">Seattle, WA - Open to remote</p>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="section" id="professional-work">
+          <div class="section-header">
+            <h2>Professional Work</h2>
+            <p>Selected shipped experiences across developer and cloud tooling.</p>
+          </div>
+
+          <article class="project-card" style="--delay: 0ms;">
+            <div class="project-header">
+              <h3>Confluent for VS Code Extension</h3>
+              <p class="project-meta">Developer tooling - Extension UX</p>
+            </div>
+            <p class="project-description">
+              Designed a streamlined IDE workflow for Kafka and Confluent Cloud
+              users, bringing schema visibility, topic management, and local
+              testing into VS Code.
+            </p>
+            <div class="media-grid">
+              <div class="media-tile">Screenshot 01</div>
+              <div class="media-tile">Screenshot 02</div>
+              <div class="media-tile">Screenshot 03</div>
+              <div class="media-tile">Screenshot 04</div>
+            </div>
+            <div class="media-video">Video walkthrough placeholder</div>
+          </article>
+
+          <article class="project-card" style="--delay: 90ms;">
+            <div class="project-header">
+              <h3>Azure Logic Apps Visual Designer</h3>
+              <p class="project-meta">Cloud workflow orchestration</p>
+            </div>
+            <p class="project-description">
+              Reimagined the drag-and-drop canvas for building complex logic app
+              flows, with emphasis on clarity, scale, and guided authoring.
+            </p>
+            <div class="media-grid">
+              <div class="media-tile">Screenshot 01</div>
+              <div class="media-tile">Screenshot 02</div>
+              <div class="media-tile">Screenshot 03</div>
+              <div class="media-tile">Screenshot 04</div>
+            </div>
+            <div class="media-video">Video walkthrough placeholder</div>
+          </article>
+        </section>
+
+        <section class="section" id="personal-projects">
+          <div class="section-header">
+            <h2>Personal Projects</h2>
+            <p>Independent explorations in AI, creative tooling, and media.</p>
+          </div>
+
+          <article class="project-card" style="--delay: 0ms;">
+            <div class="project-header">
+              <h3>Context Lens - Chrome Extension</h3>
+              <p class="project-meta">LLM-assisted recruiting insights</p>
+            </div>
+            <p class="project-description">
+              LLM-based LinkedIn profile analysis that computes role-fit match
+              scores and recommends targeted screening questions.
+            </p>
+            <div class="media-grid">
+              <figure class="media-shot landscape">
+                <img
+                  src="assets/context-lens/parse.png"
+                  alt="Context Lens profile parse view"
+                  loading="lazy"
+                />
+              </figure>
+              <figure class="media-shot landscape">
+                <img
+                  src="assets/context-lens/result.png"
+                  alt="Context Lens fit score results"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+            <div class="media-video">Demo video placeholder</div>
+          </article>
+
+          <article class="project-card" style="--delay: 80ms;">
+            <div class="project-header">
+              <h3>clrviz.com - Color Science Visualization</h3>
+              <p class="project-meta">Film color pipelines</p>
+            </div>
+            <p class="project-description">
+              Color-science visualization toolkit used by Hollywood directors,
+              cinematographers, and digital imaging technicians.
+            </p>
+            <div class="media-grid">
+              <figure class="media-shot landscape">
+                <img
+                  src="assets/clrviz/chromaticity.png"
+                  alt="clrviz chromaticity visualization"
+                  loading="lazy"
+                />
+              </figure>
+              <figure class="media-shot landscape">
+                <img
+                  src="assets/clrviz/lut-preview.png"
+                  alt="clrviz LUT preview visualization"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+            <div class="media-video">Demo video placeholder</div>
+          </article>
+
+          <article class="project-card" style="--delay: 160ms;">
+            <div class="project-header">
+              <h3>Range Cam - Video Platform</h3>
+              <p class="project-meta">Computer vision for shooting ranges</p>
+            </div>
+            <p class="project-description">
+              Dual-camera, computer-vision (OpenCV/YOLO) based system for
+              analyzing shooting range sessions and playback.
+            </p>
+            <div class="media-grid">
+              <figure class="media-shot landscape">
+                <img
+                  src="assets/range-cam/detection.png"
+                  alt="Range Cam detection view"
+                  loading="lazy"
+                />
+              </figure>
+              <figure class="media-shot landscape">
+                <img
+                  src="assets/range-cam/frontend.png"
+                  alt="Range Cam web interface"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+            <div class="media-video">Demo video placeholder</div>
+          </article>
+
+          <article class="project-card" style="--delay: 240ms;">
+            <div class="project-header">
+              <h3>Alarm Asense - In Development</h3>
+              <p class="project-meta">Adaptive iOS alarm experience</p>
+            </div>
+            <p class="project-description">
+              A smart iOS alarm app that dynamically adjusts alarm times based
+              on user-defined conditions (weather, market events, and daily
+              constraints).
+            </p>
+            <div class="media-grid">
+              <figure class="media-shot portrait">
+                <img
+                  src="assets/alarm-sense/list.PNG"
+                  alt="Alarm Asense alarm list screen"
+                  loading="lazy"
+                />
+              </figure>
+              <figure class="media-shot portrait">
+                <img
+                  src="assets/alarm-sense/edit.PNG"
+                  alt="Alarm Asense alarm edit screen"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+            <div class="media-video">Prototype video placeholder</div>
+          </article>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>Available for select collaborations and thoughtful product work.</p>
+      </footer>
+    </div>
+  </body>
+</html>
