@@ -64,6 +64,32 @@ h3 {
   font-size: clamp(1.4rem, 2.4vw, 2rem);
 }
 
+.title-with-badge {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.title-with-badge .title-text {
+  display: inline-block;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  margin-left: 10px;
+  border-radius: 999px;
+  background: #dde7e2;
+  border: 1px solid #c9d6cf;
+  color: #596660;
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
 .lead {
   font-size: 1.15rem;
   line-height: 1.7;
@@ -95,32 +121,6 @@ h3 {
   color: var(--border);
 }
 
-.hero-panel {
-  display: grid;
-  gap: 16px;
-}
-
-.hero-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 20px 24px;
-  box-shadow: var(--shadow);
-}
-
-.hero-label {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  color: var(--accent);
-  margin: 0 0 10px;
-}
-
-.hero-body {
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.6;
-}
 
 main {
   display: flex;
@@ -176,6 +176,19 @@ main {
   line-height: 1.7;
 }
 
+.project-notes {
+  margin: 0 0 22px;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.7;
+  display: grid;
+  gap: 10px;
+}
+
+.project-notes li {
+  margin: 0;
+}
+
 .media-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -223,6 +236,96 @@ main {
   height: 100%;
   object-fit: contain;
   display: block;
+  cursor: zoom-in;
+}
+
+body.is-locked {
+  overflow: hidden;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.lightbox.is-open {
+  display: flex;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 20, 18, 0.55);
+}
+
+.lightbox-shell {
+  position: relative;
+  z-index: 1;
+  width: 90vw;
+  height: 90vh;
+  background: #f7f5f0;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  padding: 18px 18px 14px;
+}
+
+.lightbox-stage {
+  flex: 1;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: #f1eee8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.lightbox-stage img {
+  max-width: 100%;
+  max-height: 100%;
+  transform-origin: center;
+  cursor: grab;
+  user-select: none;
+  will-change: transform;
+}
+
+.lightbox-stage img.is-dragging {
+  cursor: grabbing;
+}
+
+.lightbox-close {
+  align-self: flex-end;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--muted);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  margin-bottom: 12px;
+}
+
+.lightbox-close:hover {
+  color: var(--ink);
+  border-color: var(--accent);
+}
+
+.lightbox-hint {
+  margin: 12px 0 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
 }
 
 .media-video {
@@ -230,6 +333,29 @@ main {
   padding: 26px;
   min-height: 120px;
   text-align: center;
+}
+
+.video-embed {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #e9e5de;
+}
+
+.video-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.media-video.video-grid {
+  padding: 18px;
+  gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  align-items: stretch;
 }
 
 .footer {
@@ -257,9 +383,6 @@ main {
     grid-template-columns: 1fr;
   }
 
-  .hero-panel {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 @media (max-width: 700px) {
@@ -267,9 +390,6 @@ main {
     padding: 48px 20px 70px;
   }
 
-  .hero-panel {
-    grid-template-columns: 1fr;
-  }
 
   .link-row {
     flex-wrap: wrap;
