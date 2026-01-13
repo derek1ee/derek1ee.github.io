@@ -195,6 +195,16 @@ main {
   margin: 0;
 }
 
+.maker-intro {
+  margin: 0 0 16px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.maker-intro:last-of-type {
+  margin-bottom: 24px;
+}
+
 .ai-note {
   margin: 0 0 22px;
   padding: 12px 16px;
